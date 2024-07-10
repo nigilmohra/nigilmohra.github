@@ -131,14 +131,38 @@
         }
         .social-icons a {
             display: inline-block;
-            margin: 0 10px;
-            font-size: 24px;
-            color: #042c4c;
+            margin: 0 15px; /* Increased margin for spacing */
+            font-size: 36px; /* Increased font size */
+            color: #aa985d; /* Default color */
             transition: color 0.3s ease, transform 0.3s ease;
         }
         .social-icons a:hover {
-            color: #0056b3;
-            transform: translateY(-3px); /* Lift social icon on hover */
+            color: #042c4c; /* Hover color */
+            transform: translateY(-5px); /* Lift social icon on hover */
+        }
+        .social-icons a i {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .social-icons a:hover i {
+            color: #042c4c; /* Hover color */
+        }
+        .social-icons a span {
+            display: none; /* Initially hide the span */
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -20px;
+            background-color: #042c4c;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: opacity 0.3s ease;
+            opacity: 0; /* Initially hidden */
+        }
+        .social-icons a:hover span {
+            display: block; /* Show on hover */
+            opacity: 1; /* Fade in */
         }
     </style>
 </head>
@@ -157,23 +181,19 @@
         <section id="about">
             <h1>Nigil M R</h1>
             <img src="NM.png" alt="Profile Picture" class="profile-picture">
-            <p><span style="font-weight: bold; animation: boldAnimation 2s infinite ease-in-out;">Hi 👋</span></p>
-            <p>I received my B.Tech. degree in Electronics & Electrical Communication Engineering from Amrita Vishwa Vidyapeetham, Coimbatore, Tamil Nadu.</p>
-            <p>Currently, I work as a Research Associate in the Department of Electronic Systems Engineering at the Indian Institute of Science. I am part of the Secure Intelligent and Efficient Systems (SINESys) research group. My research interests are in the field of Digital VLSI, Domain Specific Computer Architecture, Hardware Security, and Embedded Systems.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
+            <p><span style="font-weight: bold; animation: boldAnimation 2s infinite ease-in-out;">Hi <span style="animation: waveAnimation 2s infinite;">👋</span></span></p>
+            <p>I received my B.Tech. degree in Electronics & Electrical Communication Engineering from <strong><a href="https://www.amrita.edu/" target="_blank">Amrita Vishwa Vidyapeetham</a></strong>, Coimbatore, Tamil Nadu.</p>
+            <p>Currently, I work as a Research Associate in the Department of Electronic Systems Engineering at the <strong><a href="https://iisc.ac.in/" target="_blank">Indian Institute of Science</a></strong>. I am part of the <strong><a href="https://labs.dese.iisc.ac.in/sinesyslab/" target="_blank">Secure Intelligent and Efficient Systems (SINESys)</a></strong> research group. My research interests are in the field of Digital VLSI, Domain Specific Computer Architecture, Hardware Security, and Embedded Systems.</p>
             <div class="social-icons">
-                <a href="https://www.linkedin.com/in/nigilmr/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/nigilmohra" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:nigilconnects@gmail.com" title="Email"><i class="far fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/nigilmr/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin" style="color: #0077B5;"></i><span>LinkedIn</span></a>
+                <a href="https://github.com/nigilmohra" target="_blank" title="GitHub"><i class="fab fa-github" style="color: #211F1F;"></i><span>GitHub</span></a>
+                <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap" style="color: #4285F4;"></i><span>Google Scholar</span></a>
+                <a href="https://orcid.org/YOUR_ID" target="_blank" title="ORCID"><i class="fas fa-id-badge" style="color: #A6CE39;"></i><span>ORCID</span></a>
+                <a href="https://twitter.com/YOUR_HANDLE" target="_blank" title="Twitter"><i class="fab fa-twitter" style="color: #1DA1F2;"></i><span>Twitter</span></a>
+                <a href="mailto:nigilconnects@gmail.com" title="Email"><i class="far fa-envelope" style="color: #D14836;"></i><span>Email</span></a>
+                <a href="cv.pdf" target="_blank" title="CV"><i class="far fa-file-alt" style="color: #000;"></i><span>CV</span></a>
             </div>
-        </section>
-        
     </main>
-    <footer>
-        <p>&copy; 2024 Nigil. All rights reserved.</p>
-    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script> <!-- Font Awesome JS -->
 </body>
 </html>

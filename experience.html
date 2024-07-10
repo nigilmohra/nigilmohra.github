@@ -106,32 +106,37 @@
             align-items: center;
             padding: 20px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer; /* Add cursor pointer */
         }
         .experience:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02); /* Scale on hover */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
         }
         .experience h2 {
             color: #042c4c; /* Experience title color */
             margin: 0 0 5px 0;
             text-align: left;
+            font-size: 1em; /* Adjusted font size */
         }
         .experience p {
             color: #555; /* Experience description color */
             margin: 0;
             text-align: left;
+            font-size: 0.9em; /* Adjusted font size */
         }
         .experience .details p {
             color: #777; /* Details text color */
             margin: 0;
+            font-size: 0.8em; /* Adjusted font size */
         }
         .logo {
             flex-shrink: 0;
-            width: 80px; /* Adjust size as needed */
-            height: 80px; /* Adjust size as needed */
+            width: 120px; /* Increased size */
+            height: 120px; /* Increased size */
             border-radius: 50%;
             object-fit: cover;
             margin-right: 20px;
+            background-color: #fff; /* White background for logo visibility */
         }
         .graphics {
             text-align: center;
@@ -175,32 +180,32 @@
             <h1>Work Experience</h1>
             <div class="experience-list">
                 <div class="experience">
-                    <img src="IISc.jpg" alt="Company 1 Logo" class="logo">
+                    <img src="IISc.jpg" alt="Indian Institute of Science Logo" class="logo">
                     <div>
                         <h2>Research Associate</h2>
                         <p>Indian Institute of Science<br>Karnataka, Bangalore<br>Dec 2023 - Present</p>
                         <div class="details">
-                            <!-- <p>Responsibilities...</p> -->
+                            <p>Secure Intelligent and Efficient Systems (SINESys)</p>
                         </div>
                     </div>
                 </div>
                 <div class="experience">
-                    <img src="IITD.jpg" alt="Company 2 Logo" class="logo">
+                    <img src="IITD.jpg" alt="Indian Institute of Technology, Delhi Logo" class="logo">
                     <div>
                         <h2>Research Intern</h2>
                         <p>Indian Institute of Technology, Delhi<br>Hauz Khas, New Delhi<br>Aug 2023 - Dec 2023</p>
                         <div class="details">
-                            <!-- <p>Responsibilities and achievements in this role.</p> -->
+                            <p>Mixed Signal Group (MSG)</p>
                         </div>
                     </div>
                 </div>
                 <div class="experience">
-                    <img src="Mavenir.jpg" alt="Company 2 Logo" class="logo">
+                    <img src="Mavenir.jpg" alt="Mavenir Systems, Inc Logo" class="logo">
                     <div>
                         <h2>Graduate Engineer</h2>
                         <p>Mavenir Systems, Inc<br>Karnataka, Bangalore<br>Jan 2023 - Jun 2023</p>
                         <div class="details">
-                            <!-- <p>Responsibilities and achievements in this role.</p> -->
+                            <p>OpenRAN - Deployment and Operations</p>
                         </div>
                     </div>
                 </div>
@@ -208,9 +213,6 @@
             </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Nigil. All rights reserved.</p>
-    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script> <!-- Font Awesome JS -->
 </body>
 </html>

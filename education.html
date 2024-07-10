@@ -106,32 +106,37 @@
             align-items: center;
             padding: 20px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer; /* Add cursor pointer */
         }
         .education:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02); /* Scale on hover */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
         }
         .education h2 {
             color: #042c4c; /* Education title color */
             margin: 0 0 5px 0;
             text-align: left;
+            font-size: 1em; /* Adjusted font size */
         }
         .education p {
             color: #555; /* Education description color */
             margin: 0;
             text-align: left;
+            font-size: 0.9em; /* Adjusted font size */
         }
         .education .details p {
             color: #777; /* Details text color */
             margin: 0;
+            font-size: 0.8em; /* Adjusted font size */
         }
         .logo {
             flex-shrink: 0;
-            width: 80px; /* Adjust size as needed */
-            height: 80px; /* Adjust size as needed */
+            width: 120px; /* Increased size */
+            height: 120px; /* Increased size */
             border-radius: 50%;
             object-fit: cover;
             margin-right: 20px;
+            background-color: #fff; /* White background for logo visibility */
         }
         @media (max-width: 768px) {
             .education {
@@ -162,9 +167,9 @@
             <h1>Education</h1>
             <div class="education-list">
                 <div class="education">
-                    <img src="ASE.jpg" alt="University 1 Logo" class="logo">
+                    <img src="ASE.jpg" alt="Amrita Vishwa Vidyapeetham Logo" class="logo">
                     <div>
-                        <h2>B.Tech in Electronics and Communication Enginnering (ECE)</h2>
+                        <h2>B.Tech in Electronics and Communication Engineering (ECE)</h2>
                         <p>Amrita Vishwa Vidyapeetham<br>Coimbatore, Tamil Nadu<br>2019 - 2023</p>
                         <div class="details">
                             <p>GPA: 8.61/10 (Ranked 11 among 180 Students)</p>
@@ -172,10 +177,10 @@
                     </div>
                 </div>
                 <div class="education">
-                    <img src="VLMHSS.png" alt="University 2 Logo" class="logo">
+                    <img src="VLMHSS2.png" alt="Venkatalakshmi Matriculation Higher Secondary School Logo" class="logo">
                     <div>
-                        <h2>Senior Secondary Education (Class 12)</h2>
-                        <p>Venkatalakshmi Matriculation Higer Secondary School<br>Coimbatore, Tamil Nadu<br>2016 - 2018</p>
+                        <h2>Indian Secondary Education Certificate (ISEC)</h2>
+                        <p>Venkatalakshmi Matriculation Higher Secondary School<br>Coimbatore, Tamil Nadu<br>2016 - 2018</p>
                         <div class="details">
                             <!-- <p>Additional details about your degree, courses, achievements, etc.</p> -->
                         </div>
@@ -185,9 +190,6 @@
             </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Nigil. All rights reserved.</p>
-    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script> <!-- Font Awesome JS -->
 </body>
 </html>

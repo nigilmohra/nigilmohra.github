@@ -96,48 +96,52 @@
         .publication-list {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 10px; /* Reduced gap */
         }
         .publication {
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
+            padding: 10px; /* Reduced padding */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .publication:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .publication-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 5px;
         }
         .publication h2 {
             color: #042c4c; /* Publication title color */
-            margin-bottom: 5px;
-            text-align: left; /* Align to the left */
+            margin: 0;
+            font-size: 1em; /* Smaller font size */
         }
-        .publication p {
-            color: #555; /* Publication description color */
-            margin: 0 0 10px 0;
-            text-align: left;
+        .publication .year {
+            color: #555;
+            font-size: 0.9em; /* Smaller font size */
         }
         .publication .details {
+            display: none;
             margin-top: 10px;
             padding-top: 10px;
             border-top: 1px solid #ddd; /* Division above details */
+            font-size: 0.8em; /* Smaller font size */
         }
         .publication .details p {
             color: #777; /* Details text color */
-            margin: 0 0 5px 0;
-        }
-        .publication .details .links {
-            margin-top: 10px;
+            margin: 5px 0;
         }
         .publication .details .links a {
             display: inline-block;
             margin-right: 10px;
             color: #042c4c;
             text-decoration: none;
+            font-size: 0.9em; /* Smaller font size */
             transition: color 0.3s ease;
         }
         .publication .details .links a:hover {
@@ -149,12 +153,21 @@
         }
         @media (max-width: 768px) {
             .publication {
-                flex-direction: column;
-                align-items: center;
                 text-align: center;
             }
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const publicationHeaders = document.querySelectorAll('.publication-header');
+            publicationHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const details = this.nextElementSibling;
+                    details.style.display = details.style.display === 'none' ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -168,44 +181,111 @@
         </nav>
     </header>
     <main>
-        <section id="publications">
-            <h1>Publications</h1>
+        <section id="conference-proceedings">
+            <h1>Conference Proceedings</h1>
             <div class="publication-list">
-                <!-- PUBLICATION 1 -->
+                <!-- CONFERENCE PUBLICATION 1 -->
                 <div class="publication">
-                    <h2>Low Footprint Meander Monopole Patch as EMI Sensors</h2>
-                    <p class="extra-links">
-                        <a href="https://doi.org/10.1109/APSCON60364.2024.10466018" style="margin-right: 10px;"><i class="fas fa-link"></i> DOI</a> <!-- Replace '#' with actual DOI link -->
-                        <a href="#" style="margin-right: 10px;"><i class="fas fa-video"></i> Video</a> <!-- Replace '#' with actual video link -->
-                        <a href="#" style="margin-right: 10px;"><i class="fas fa-file-powerpoint"></i> Slides</a> <!-- Replace '#' with actual slides link -->
-                    </p>
+                    <div class="publication-header">
+                        <h2>Low Footprint Meander Monopole Patch as EMI Sensors</h2>
+                        <span class="year">2024</span>
+                    </div>
                     <div class="details">
-                        <p class="author"><span style="font-weight: bold; animation: boldAnimation 2s infinite ease-in-out;">Authors:</span> Aakash Ashutosh Pednekar, Bhuvan Sai Lingam, <span style="font-weight: bold; animation: boldAnimation 2s infinite ease-in-out;">Nigil M R</span>, Rahul Raja R, Sabarish Narayanan B (ECE, ASE)</p>
-                        <p class="conference"><span style="font-weight: bold; animation: boldAnimation 2s infinite ease-in-out;"> Conference Proceedings: </span>IEEE Applied Sensing Conference Special Session (APSCON)</p>
+                        <p class="author"><strong>Authors:</strong> Aakash Ashutosh Pednekar, Bhuvan Sai Lingam, <strong>Nigil M R</strong>, Rahul Raja R, Sabarish Narayanan B (ECE, ASE)</p>
+                        <p class="conference"><strong>Conference:</strong> IEEE Applied Sensing Conference Special Session (APSCON)</p>
+                        <div class="links">
+                            <a href="https://doi.org/10.1109/APSCON60364.2024.10466018"><i class="fas fa-link"></i> DOI</a>
+                            <a href="#"><i class="fas fa-video"></i> Video</a>
+                            <a href="#"><i class="fas fa-file-powerpoint"></i> Slides</a>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- PUBLICATION 2 -->
-                </div>
+                <!-- CONFERENCE PUBLICATION 2 -->
                 <div class="publication">
-                    <h2>Microwave NDT for Estimating Organic Textile Dye Residue on Top Soil</h2>
-                    <p class="extra-links">
-                        <a href="https://doi.org/10.1109/InGARSS59135.2023.10490319" style="margin-right: 10px;"><i class="fas fa-link"></i> DOI</a> <!-- Replace '#' with actual DOI link -->
-                        <a href="#" style="margin-right: 10px;"><i class="fas fa-video"></i> Video</a> <!-- Replace '#' with actual video link -->
-                        <a href="#" style="margin-right: 10px;"><i class="fas fa-file-powerpoint"></i> Slides</a> <!-- Replace '#' with actual slides link -->
-                    </p>
+                    <div class="publication-header">
+                        <h2>Microwave NDT for Estimating Organic Textile Dye Residue on Top Soil</h2>
+                        <span class="year">2023</span>
+                    </div>
                     <div class="details">
-                        <p class="author"><span style="font-weight: bold; animation: boldAnimation 2s infinite ease-in-out;">Authors:</span> A Pavithra, Jhakan M, K Akilesh, <span style="font-weight: bold; animation: boldAnimation 2s infinite ease-in-out;">Nigil M R</span>, Sabarish Narayanan B </p>
-                        <p class="conference"><span style="font-weight: bold; animation: boldAnimation 2s infinite ease-in-out;"> Conference Proceedings: </span>Indian Geoscience and Remote Sensing Symposium (InGARSS)</p>
+                        <p class="author"><strong>Authors:</strong> A Pavithra, Jhakan M, K Akilesh, <strong>Nigil M R</strong>, Sabarish Narayanan B </p>
+                        <p class="conference"><strong>Conference:</strong> Indian Geoscience and Remote Sensing Symposium (InGARSS)</p>
+                        <div class="links">
+                            <a href="https://doi.org/10.1109/InGARSS59135.2023.10490319"><i class="fas fa-link"></i> DOI</a>
+                            <a href="#"><i class="fas fa-video"></i> Video</a>
+                            <a href="#"><i class="fas fa-file-powerpoint"></i> Slides</a>
+                        </div>
                     </div>
                 </div>
-                <!-- Add more publications as needed -->
+                <!-- Add more conference publications as needed -->
             </div>
         </section>
+        
+        <section id="book-chapters">
+            <h1>Book Chapters</h1>
+            <div class="publication-list">
+
+                <!-- BOOK CHAPTER 2 -->
+                <div class="publication">
+                    <div class="publication-header">
+                        <h2>Metamaterial-Based Antenna and Absorbers in THz Range  </h2>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="details">
+                        <p class="author"><strong>Authors:</strong> <strong> M R Nigil</strong>, R. Thiruvengadathan (ME, SUU) </p>
+                        <p class="book"><strong>Book:</strong> Electromagnetic Metamaterials: Properties and Applications (Chapter 1)</p>
+                        <p class="publisher"><strong>Publisher:</strong> Wiley Online Library, Pages 01–31, 2023</p>
+                        <div class="links">
+                            <a href="https://doi.org/10.1002/9781394167074.ch1"><i class="fas fa-link"></i> Link</a>
+                            <a href="#"><i class="fas fa-video"></i> Video</a>
+                            <a href="#"><i class="fas fa-file-powerpoint"></i> Slides</a>
+                        </div>
+                    </div>
+                </div>       
+                               
+                <!-- BOOK CHAPTER 1 -->
+                <div class="publication">
+                    <div class="publication-header">
+                        <h2>Nanoclay-based Polymer Nanocomposites for Electromagnetic Interference Shielding </h2>
+                        <span class="year">2022</span>
+                    </div>
+                    <div class="details">
+                        <p class="author"><strong>Authors:</strong> <strong> M R Nigil</strong>, B. T. S Ramanujam (Sciences, ASE), R. Thiruvengadathan (ME, SUU) </p>
+                        <p class="book"><strong>Book:</strong> Advanced Applications of Micro and Nano Clay II, Synthetic Polymer Composites</p>
+                        <p class="publisher"><strong>Publisher:</strong> Materials Research Foundation, Volume 129, Pages 53-78, 2022</p>
+                        <div class="links">
+                            <a href="https://doi.org/10.21741/9781644902035-3"><i class="fas fa-link"></i> Link</a>
+                            <a href="#"><i class="fas fa-video"></i> Video</a>
+                            <a href="#"><i class="fas fa-file-powerpoint"></i> Slides</a>
+                        </div>
+                    </div>
+                </div>         
+                <!-- Add more book chapters as needed -->
+            </div>
+        </section>
+<!--         
+        <section id="journal-publications">
+            <h1>Journal Publications</h1>
+            <div class="publication-list">
+                <div class="publication">
+                    <div class="publication-header">
+                        <h2>Title of Journal Publication 1</h2>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="details">
+                        <p class="author"><strong>Authors:</strong> Author 1, Author 2, <strong>Author 3</strong></p>
+                        <p class="journal"><strong>Journal:</strong> Name of the Journal</p>
+                        <div class="links">
+                            <a href="#"><i class="fas fa-link"></i> Link</a>
+                            <a href="#"><i class="fas fa-video"></i> Video</a>
+                            <a href="#"><i class="fas fa-file-powerpoint"></i> Slides</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section> 
+    -->
     </main>
-    <footer>
-        <p>&copy; 2024 Nigil. All rights reserved.</p>
-    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script> <!-- Font Awesome JS -->
 </body>
 </html>
