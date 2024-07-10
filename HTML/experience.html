@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome CSS -->
+    <style>
+        /* Reset and basic styling */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            color: #333; /* Main text color */
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        section {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            text-align: center;
+            color: #042c4c; /* Primary color */
+        }
+        p {
+            text-align: center;
+            color: #555; /* Secondary text color */
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        a {
+            color: #aa985d;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #042c4c;
+        }
+        /* Navigation styling */
+        nav {
+            background-color: #aa985d;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #042c4c;
+            text-decoration: none;
+            padding-bottom: 3px;
+            border-bottom: 2px solid transparent; /* Remove underline */
+            transition: border-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            border-bottom-color: #fff; /* Add underline on hover */
+        }
+        /* Footer styling */
+        footer {
+            background-color: #aa985d;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            color: #042c4c; /* Footer text color */
+            margin: 0;
+        }
+        /* Experience list styling */
+        .experience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .experience {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .experience:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .experience h2 {
+            color: #042c4c; /* Experience title color */
+            margin: 0 0 5px 0;
+            text-align: left;
+        }
+        .experience p {
+            color: #555; /* Experience description color */
+            margin: 0;
+            text-align: left;
+        }
+        .experience .details p {
+            color: #777; /* Details text color */
+            margin: 0;
+        }
+        .logo {
+            flex-shrink: 0;
+            width: 80px; /* Adjust size as needed */
+            height: 80px; /* Adjust size as needed */
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .graphics {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .graphics i {
+            font-size: 40px;
+            color: #aa985d;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+        .graphics i:hover {
+            color: #042c4c;
+        }
+        @media (max-width: 768px) {
+            .experience {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .logo {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experience.html">Work Experience</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="experience">
+            <h1>Work Experience</h1>
+            <div class="experience-list">
+                <div class="experience">
+                    <img src="IISc.jpg" alt="Company 1 Logo" class="logo">
+                    <div>
+                        <h2>Research Associate</h2>
+                        <p>Indian Institute of Science<br>Karnataka, Bangalore<br>Dec 2023 - Present</p>
+                        <div class="details">
+                            <!-- <p>Responsibilities...</p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="experience">
+                    <img src="IITD.jpg" alt="Company 2 Logo" class="logo">
+                    <div>
+                        <h2>Research Intern</h2>
+                        <p>Indian Institute of Technology, Delhi<br>Hauz Khas, New Delhi<br>Aug 2023 - Dec 2023</p>
+                        <div class="details">
+                            <!-- <p>Responsibilities and achievements in this role.</p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="experience">
+                    <img src="Mavenir.jpg" alt="Company 2 Logo" class="logo">
+                    <div>
+                        <h2>Graduate Engineer</h2>
+                        <p>Mavenir Systems, Inc<br>Karnataka, Bangalore<br>Jan 2023 - Jun 2023</p>
+                        <div class="details">
+                            <!-- <p>Responsibilities and achievements in this role.</p> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more experience entries as needed -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Nigil. All rights reserved.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script> <!-- Font Awesome JS -->
+</body>
+</html>
