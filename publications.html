@@ -102,70 +102,101 @@
             color: #042c4c; /* Footer text color */
             margin: 0;
         }
-        /* Publication list styling */
-        .publication-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px; /* Reduced gap */
-        }
-        .publication {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 10px; /* Reduced padding */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .publication:hover {
-            transform: scale(1.02);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .publication-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            padding: 5px;
-        }
-        .publication h2 {
-            color: #042c4c; /* Publication title color */
-            margin: 0;
-            font-size: 1em; /* Smaller font size */
-        }
-        .publication .year {
-            color: #555;
-            font-size: 0.9em; /* Smaller font size */
-        }
-        .publication .details {
-            display: none;
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px solid #ddd; /* Division above details */
-            font-size: 0.8em; /* Smaller font size */
-        }
-        .publication .details p {
-            color: #777; /* Details text color */
-            margin: 5px 0;
-        }
-        .publication .details .links a {
-            display: inline-block;
-            margin-right: 10px;
-            color: #042c4c;
-            text-decoration: none;
-            font-size: 0.9em; /* Smaller font size */
-            transition: color 0.3s ease;
-        }
-        .publication .details .links a:hover {
-            color: #0056b3;
-        }
-        .author, .conference, .journal {
-            margin-bottom: 5px;
-            color: #777; /* Author, conference, journal text color */
-        }
-        @media (max-width: 768px) {
-            .publication {
-                text-align: center;
-            }
-        }
+/* Publication list styling */
+.publication-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reduced gap */
+}
+
+.publication {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px; /* Reduced padding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Add cursor pointer for hover effect */
+}
+
+.publication:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.publication-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.publication h2 {
+    color: #042c4c; /* Publication title color */
+    margin: 0;
+    font-size: 1em; /* Smaller font size */
+}
+
+.publication .year {
+    color: #555;
+    font-size: 0.9em; /* Smaller font size */
+}
+
+.publication .details {
+    display: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd; /* Division above details */
+    font-size: 0.8em; /* Smaller font size */
+}
+
+.publication:hover .details {
+    display: block; /* Show details on hover */
+}
+
+.publication .details p {
+    color: #777; /* Details text color */
+    margin: 5px 0;
+}
+
+.publication .details .links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #042c4c;
+    text-decoration: none;
+    font-size: 0.9em; /* Smaller font size */
+    transition: color 0.3s ease;
+}
+
+.publication .details .links a:hover {
+    color: #0056b3;
+}
+
+.author, .conference, .journal {
+    margin-bottom: 5px;
+    color: #777; /* Author, conference, journal text color */
+}
+
+@media (max-width: 768px) {
+    .publication {
+        text-align: center;
+    }
+}
+
+/* Suggestion on hover */
+.publication:hover::after {
+    /* content: 'Click for more details'; */
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Ensure it appears above other elements */
+    font-size: 0.8em; /* Adjust font size */
+    color: #555; /* Adjust text color */
+}
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
