@@ -54,10 +54,10 @@
         }
         /* Navigation styling */
         nav {
-            background-color: #aa985d;
-            color: #fff;
+            color: #333;
             padding: 10px 20px;
             text-align: center;
+            transition: background-color 0.3s ease;
         }
         nav ul {
             margin: 0;
@@ -66,17 +66,27 @@
         }
         nav ul li {
             display: inline-block;
-            margin: 0 10px;
+            margin: 10px 15px; /* Improved spacing between tiles */
+            transition: transform 0.3s ease;
+        }
+        nav ul li:hover {
+            transform: translateY(-3px); /* Lift nav item on hover */
         }
         nav ul li a {
-            color: #042c4c;
+            color: #333;
             text-decoration: none;
-            padding-bottom: 3px;
-            border-bottom: 2px solid transparent; /* Remove underline */
-            transition: border-color 0.3s ease;
+            padding: 6px 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            font-weight: 500; /* Improved font density */
+            display: inline-block;
         }
         nav ul li a:hover {
-            border-bottom-color: #fff; /* Add underline on hover */
+            transform: translateY(-5px); /* Lift button on hover */
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* Add shadow on hover */
+            background-color: #f0f0f0; /* Change background color on hover */
         }
         /* Footer styling */
         footer {
@@ -182,6 +192,7 @@
                         <h2>Indian Secondary Education Certificate (ISEC)</h2>
                         <p>Venkatalakshmi Matriculation Higher Secondary School<br>Coimbatore, Tamil Nadu<br>2016 - 2018</p>
                         <div class="details">
+                            <p>GPA: 86.3% (Major: Computer Science and PCM)</p>
                             <!-- <p>Additional details about your degree, courses, achievements, etc.</p> -->
                         </div>
                     </div>
