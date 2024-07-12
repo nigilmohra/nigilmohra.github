@@ -15,11 +15,13 @@
             padding: 0;
             color: #333; /* Main text color */
         }
+
         main {
             max-width: 1200px;
             margin: 20px auto;
             padding: 0 20px;
         }
+
         section {
             background-color: #fff;
             margin-bottom: 20px;
@@ -27,31 +29,39 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
+
         h1, h2, h3 {
             text-align: center;
             color: #042c4c; /* Primary color */
+            font-weight: 400; /* Reduced font thickness */
         }
+
         p {
             text-align: center;
             color: #555; /* Secondary text color */
         }
+
         ul {
             list-style-type: none;
             padding: 0;
             text-align: center;
         }
+
         ul li {
             display: inline-block;
             margin: 0 10px;
         }
+
         a {
             color: #aa985d;
             text-decoration: none;
             transition: color 0.3s ease;
         }
+
         a:hover {
             color: #042c4c;
         }
+
         /* Navigation styling */
         nav {
             color: #333;
@@ -90,16 +100,26 @@
         }
         /* Footer styling */
         footer {
-            background-color: #aa985d;
-            color: #fff;
+            background-color: #ffffff; /* Change color to white */
+            color: #042c4c; /* Footer text color */
             text-align: center;
             padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative; /* Changed from fixed */
+            margin-top: 20px; /* Margin to add space between footer and content */
+            width: fit-content; /* Fit content width */
+            margin-left: auto;
+            margin-right: auto; /* Center align */
+            z-index: 1000; /* Ensure it's above other content */
+            font-size: 12px; /* Small font size for a compact footer */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        footer:hover {
+            transform: translateY(-5px); /* Lift footer on hover */
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* Add shadow on hover */
         }
         footer p {
-            color: #042c4c; /* Footer text color */
             margin: 0;
         }
         /* Experience list styling */
@@ -223,6 +243,9 @@
             </div>
         </section>
     </main>
+    <footer>
+        <p>© 2024 Nigil M R. All rights reserved.</p>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script> <!-- Font Awesome JS -->
 </body>
 </html>

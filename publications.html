@@ -15,11 +15,13 @@
             padding: 0;
             color: #333; /* Main text color */
         }
+
         main {
             max-width: 1200px;
             margin: 20px auto;
             padding: 0 20px;
         }
+
         section {
             background-color: #fff;
             margin-bottom: 20px;
@@ -27,31 +29,39 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
+
         h1, h2, h3 {
             text-align: center;
             color: #042c4c; /* Primary color */
+            font-weight: 400; /* Reduced font thickness */
         }
+
         p {
             text-align: center;
             color: #555; /* Secondary text color */
         }
+
         ul {
             list-style-type: none;
             padding: 0;
             text-align: center;
         }
+
         ul li {
             display: inline-block;
             margin: 0 10px;
         }
+
         a {
             color: #aa985d;
             text-decoration: none;
             transition: color 0.3s ease;
         }
+
         a:hover {
             color: #042c4c;
         }
+
         /* Navigation styling */
         nav {
             color: #333;
@@ -88,116 +98,135 @@
             box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* Add shadow on hover */
             background-color: #f0f0f0; /* Change background color on hover */
         }
+        
         /* Footer styling */
         footer {
-            background-color: #aa985d;
-            color: #fff;
+            background-color: #ffffff; /* Change color to white */
+            color: #042c4c; /* Footer text color */
             text-align: center;
             padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative; /* Changed from fixed */
+            margin-top: 20px; /* Margin to add space between footer and content */
+            width: fit-content; /* Fit content width */
+            margin-left: auto;
+            margin-right: auto; /* Center align */
+            z-index: 1000; /* Ensure it's above other content */
+            font-size: 12px; /* Small font size for a compact footer */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        footer:hover {
+            transform: translateY(-5px); /* Lift footer on hover */
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* Add shadow on hover */
         }
         footer p {
-            color: #042c4c; /* Footer text color */
             margin: 0;
         }
-/* Publication list styling */
-.publication-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Reduced gap */
-}
 
-.publication {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px; /* Reduced padding */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer; /* Add cursor pointer for hover effect */
-}
+        /* Publication list styling */
+        .publication-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Reduced gap */
+        }
 
-.publication:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+        .publication {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px; /* Reduced padding */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer; /* Add cursor pointer for hover effect */
+        }
 
-.publication-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-}
+        .publication:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
-.publication h2 {
-    color: #042c4c; /* Publication title color */
-    margin: 0;
-    font-size: 1em; /* Smaller font size */
-}
+        .publication-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+        }
 
-.publication .year {
-    color: #555;
-    font-size: 0.9em; /* Smaller font size */
-}
+        .publication h2 {
+            color: #042c4c; /* Publication title color */
+            margin: 0;
+            font-size: 1em; /* Smaller font size */
+            font-weight: 400; /* Reduced font thickness */
+        }
 
-.publication .details {
-    display: none;
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px solid #ddd; /* Division above details */
-    font-size: 0.8em; /* Smaller font size */
-}
+        .publication .year {
+            color: #555;
+            font-size: 0.9em; /* Smaller font size */
+            font-weight: 400; /* Reduced font thickness */
+        }
 
-.publication:hover .details {
-    display: block; /* Show details on hover */
-}
+        .publication .details {
+            display: none;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd; /* Division above details */
+            font-size: 0.8em; /* Smaller font size */
+        }
 
-.publication .details p {
-    color: #777; /* Details text color */
-    margin: 5px 0;
-}
+        .publication:hover .details {
+            display: block; /* Show details on hover */
+        }
 
-.publication .details .links a {
-    display: inline-block;
-    margin-right: 10px;
-    color: #042c4c;
-    text-decoration: none;
-    font-size: 0.9em; /* Smaller font size */
-    transition: color 0.3s ease;
-}
+        .publication .details p {
+            color: #777; /* Details text color */
+            margin: 5px 0;
+        }
 
-.publication .details .links a:hover {
-    color: #0056b3;
-}
+        .publication .details .links a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #042c4c;
+            text-decoration: none;
+            font-size: 0.9em; /* Smaller font size */
+            transition: color 0.3s ease;
+        }
 
-.author, .conference, .journal {
-    margin-bottom: 5px;
-    color: #777; /* Author, conference, journal text color */
-}
+        .publication .details .links a:hover {
+            color: #0056b3;
+        }
 
-@media (max-width: 768px) {
-    .publication {
-        text-align: center;
-    }
-}
+        .author, .conference, .journal {
+            margin-bottom: 5px;
+            color: #777; /* Author, conference, journal text color */
+        }
 
-/* Suggestion on hover */
-.publication:hover::after {
-    /* content: 'Click for more details'; */
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1; /* Ensure it appears above other elements */
-    font-size: 0.8em; /* Adjust font size */
-    color: #555; /* Adjust text color */
-}
-    </style>
+        @media (max-width: 768px) {
+            .publication {
+                text-align: center;
+            }
+        }
+
+        
+
+        /* Suggestion on hover */
+        .publication:hover::after {
+            /* content: 'Click for more details'; */
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1; /* Ensure it appears above other elements */
+            font-size: 0.8em; /* Adjust font size */
+            color: #555; /* Adjust text color */
+        }
+
+        
+
+            </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const publicationHeaders = document.querySelectorAll('.publication-header');
@@ -327,6 +356,9 @@
         </section> 
     -->
     </main>
+    <footer>
+        <p>© 2024 Nigil M R. All rights reserved.</p>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script> <!-- Font Awesome JS -->
 </body>
 </html>
