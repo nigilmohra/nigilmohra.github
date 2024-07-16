@@ -62,6 +62,12 @@
             color: #042c4c;
         }
 
+        /* Selection */
+        ::selection {
+            background-color: #aa985d; /* Match with the website's secondary color */
+            color: #fff; /* White text color for better contrast */
+        }
+
          /* Navigation styling */
          nav {
             background-color: #fff; /* White background */
@@ -118,6 +124,218 @@
         nav ul li a:hover {
             color: #555;
             background-color: #f0f0f0; /* Change background color on hover */
+        }
+
+        /* General styling */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            color: #333; /* Main text color */
+        }
+
+        /* Navigation styling */
+        nav {
+            background-color: #fff; /* White background */
+            color: #333;
+            padding: 10px 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for the navbar */
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center; /* Center align navigation */
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            justify-content: center; /* Center align navigation links */
+        }
+
+        .nav-links li {
+            margin: 0 15px; /* Increased spacing */
+            position: relative; /* Ensure relative positioning for animation */
+        }
+
+        .nav-links li a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 15px; /* Adjusted padding */
+            border-radius: 5px;
+            transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+            display: inline-block;
+            font-size: 18px; /* Increased font size */
+            font-weight: 500; /* Improved font density */
+            position: relative; /* Ensure relative positioning for animation */
+        }
+
+        .nav-links li a::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #333;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-links li a:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        .nav-links li a:hover {
+            color: #555;
+            background-color: #f0f0f0; /* Change background color on hover */
+        }
+
+        /* Dropdown button and content */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropbtn {
+            background-color: transparent;
+            color: #333;
+            border: none;
+            cursor: pointer;
+            font-size: 18px; /* Increased font size */
+            display: flex;
+            align-items: center; /* Center align dropdown icon */
+            transition: color 0.3s ease; /* Smooth transition */
+        }
+
+        .dropbtn:hover {
+            color: #555; /* Change color on hover */
+        }
+
+        /* Hide the checkbox */
+        .dropdown-toggle {
+            display: none;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: fixed; /* Fixed position for full-page dropdown */
+            background-color: #fff;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            width: 100%; /* Full width for dropdown content */
+            padding: 20px; /* Increased padding inside the dropdown content for more breathing room */
+            top: 0; /* Position at the top */
+            left: 0; /* Align to the left */
+            box-sizing: border-box; /* Ensure padding is included in width */
+            border-radius: 10px; /* Add border radius for curved edges */
+
+            /* Background and animation */
+            background-clip: padding-box; /* Clip background to padding box */
+            transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+
+            /* Animation for individual items */
+            opacity: 0; /* Initially hidden */
+            transform: translateY(-100%); /* Move content above to hide initially */
+
+            /* Ensure text is fully covered */
+            overflow: visible; /* Adjust if necessary */
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 20px; /* Increase horizontal padding for dropdown items */
+            text-decoration: none;
+            display: block;
+            font-size: 18px; /* Increased font size */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+            border-radius: 5px; /* Add border radius for individual items */
+            position: relative; /* Ensure relative positioning for animation */
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f0f0f0; /* Hover background color */
+        }
+
+        .dropdown-content a::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #333;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .dropdown-content a:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        .dropdown-content a:not(:last-child) {
+            margin-bottom: 10px; /* Bottom margin between items */
+        }
+
+        /* Show dropdown content when checkbox is checked */
+        .dropdown-toggle:checked + .dropdown .dropdown-content {
+            display: block;
+            opacity: 1; /* Fade in */
+            transform: translateY(0); /* Slide down animation */
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Hide regular navigation links in minimized view */
+            }
+
+            .dropdown {
+                display: block; /* Show dropdown button in minimized view */
+                margin-right: auto; /* Push to the left edge */
+            }
+
+            .dropdown-toggle:checked + .dropdown .dropdown-content {
+                display: block; /* Show dropdown content when checkbox is checked */
+            }
+
+            .dropdown-content {
+                padding: 20px; /* Increased padding inside the dropdown content for smaller screens */
+            }
+
+            .dropbtn {
+                color: #333; /* Ensure color consistency */
+            }
+
+            .dropbtn:hover {
+                color: #555; /* Adjust hover color */
+            }
+        }
+
+        @media (min-width: 769px) {
+            .nav-container {
+                justify-content: center; /* Center align navigation in fullscreen view */
+            }
+
+            .nav-links {
+                display: flex; /* Show regular navigation links in fullscreen view */
+            }
+
+            .dropdown {
+                display: none; /* Hide dropdown button in fullscreen view */
+            }
+
+            .dropdown-content {
+                display: none; /* Hide dropdown content in fullscreen view */
+            }
         }
         
         /* Footer styling */
@@ -263,12 +481,31 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="experience.html">Work Experience</a></li>
-            </ul>
+            <div class="nav-container">
+                <!-- Add this checkbox input in your HTML -->
+                <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
+
+                <!-- Dropdown content -->
+                <div class="dropdown">
+                    <label for="dropdown-toggle" class="dropbtn">
+                        <span class="fa fa-bars"></span>
+                    </label>
+                    <div class="dropdown-content">
+                        <a href="index.html">Home</a>
+                        <a href="publications.html">Publications</a>
+                        <a href="education.html">Education</a>
+                        <a href="experience.html">Work Experience</a>
+                    </div>
+                </div>
+
+                <!-- Regular navigation links -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="experience.html">Work Experience</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
